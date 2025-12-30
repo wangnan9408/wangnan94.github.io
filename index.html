@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王楠 - 个人履历</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        
+        /* 导航 */
+        nav { background: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #2c5aa0; }
+        .nav-links a { margin-left: 2rem; text-decoration: none; color: #555; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #2c5aa0; }
+        
+        /* 主要内容区域 */
+        .container { max-width: 1000px; margin: 80px auto 40px; background: #fff; padding: 2.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        
+        /* 头部横幅 */
+        .header { text-align: center; padding-bottom: 2rem; border-bottom: 2px solid #eaeaea; margin-bottom: 2rem; }
+        .name { font-size: 2.8rem; color: #2c5aa0; margin-bottom: 0.5rem; }
+        .title { font-size: 1.3rem; color: #666; margin-bottom: 1.5rem; }
+        .highlight-stats { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .stat { font-size: 1.1rem; color: #444; }
+        .stat i { color: #2c5aa0; margin-right: 8px; }
+        
+        /* 基础信息表 */
+        .section { margin-bottom: 2.5rem; }
+        h2 { color: #2c5aa0; border-left: 5px solid #2c5aa0; padding-left: 15px; margin-bottom: 1.5rem; font-size: 1.8rem; }
+        
+        .info-table { width: 100%; border-collapse: collapse; }
+        .info-table tr { border-bottom: 1px solid #eee; }
+        .info-table td { padding: 1rem 0; vertical-align: top; }
+        .info-table td:first-child { width: 25%; font-weight: 600; color: #555; }
+        
+        /* 技能标签 */
+        .skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 0.5rem; }
+        .skill-tag { background: #e8efff; color: #2c5aa0; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
+        
+        /* 核心成果卡片 */
+        .achievement-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+        .card { background: #f0f7ff; padding: 1.5rem; border-radius: 8px; text-align: center; border-top: 4px solid #2c5aa0; }
+        .card .number { font-size: 2.2rem; font-weight: bold; color: #2c5aa0; display: block; }
+        .card .desc { color: #555; margin-top: 0.5rem; }
+        
+        /* 工作经历时间线 */
+        .timeline { position: relative; padding-left: 20px; border-left: 2px solid #2c5aa0; margin-left: 10px; }
+        .timeline-item { margin-bottom: 2rem; position: relative; }
+        .timeline-item:before { content: ''; position: absolute; left: -28px; top: 5px; width: 12px; height: 12px; background: #2c5aa0; border-radius: 50%; }
+        .job-title { font-size: 1.3rem; color: #2c5aa0; font-weight: 600; }
+        .company { font-weight: 600; color: #444; margin: 0.3rem 0; }
+        .period { color: #888; font-style: italic; }
+        .responsibilities { margin-top: 0.8rem; padding-left: 1.5rem; }
+        .responsibilities li { margin-bottom: 0.5rem; }
+        
+        /* 页脚 */
+        footer { text-align: center; padding: 2rem; color: #888; font-size: 0.9rem; border-top: 1px solid #eee; margin-top: 2rem; }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .container { padding: 1.5rem; margin: 60px 20px 20px; }
+            .name { font-size: 2.2rem; }
+            .highlight-stats { gap: 1.5rem; }
+            .info-table td { display: block; width: 100%; border: none; padding: 0.5rem 0; }
+            .info-table td:first-child { font-weight: 700; border-bottom: none; padding-top: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">王楠 | 个人履历</div>
+            <div class="nav-links">
+                <a href=" ">基本信息</a >
+                <a href="#skills">专业技能</a >
+                <a href="#achievements">核心成果</a >
+                <a href="#experience">工作经历</a >
+                <a href="#about">核心能力</a >
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <div class="container">
+        <!-- 头部横幅 -->
+        <header class="header">
+            <h1 class="name">王楠</h1>
+            <p class="title"><i class="fas fa-briefcase"></i> 9年跨行业项目管理专家，含金融领域</p >
+            <div class="highlight-stats">
+                <div class="stat"><i class="fas fa-award"></i> 9+ 高含金量职业资格</div>
+                <div class="stat"><i class="fas fa-chart-line"></i> 主导项目总额 2亿元+</div>
+                <div class="stat"><i class="fas fa-map-marker-alt"></i> 现居地：四川/成都</div>
+            </div>
+        </header>
+
+        <!-- 基本信息 -->
+        <section id="info" class="section">
+            <h2><i class="fas fa-id-card"></i> 基本信息</h2>
+            <table class="info-table">
+                <tr><td>姓名</td><td>王楠</td></tr>
+                <tr><td>性别</td><td>女</td></tr>
+                <tr><td>工作年限</td><td>7年</td></tr>
+                <tr><td>出生年月</td><td>1994.08</td></tr>
+                <tr><td>工作地区</td><td>四川/成都</td></tr>
+                <tr><td>学历/专业</td><td>本科 / 计算机科学与技术</td></tr>
+                <tr><td>联系方式</td><td>（简历中未提供，请自行添加）</td></tr>
+            </table>
+        </section>
+
+        <!-- 职业资格与专业技能 -->
+        <section id="skills" class="section">
+            <h2><i class="fas fa-user-tie"></i> 职业资格与专业技能</h2>
+            <table class="info-table">
+                <tr>
+                    <td>职业资格</td>
+                    <td>
+                        <div class="skills">
+                            <span class="skill-tag">PMP项目管理专业人士资格认证</span>
+                            <span class="skill-tag">信息系统项目管理师（高级）</span>
+                            <span class="skill-tag">NPDP产品经理国际认证</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>专业能力领域</td>
+                    <td>
+                        <div class="skills">
+                            <span class="skill-tag">金融行业项目管理</span>
+                            <span class="skill-tag">自动化工程管理</span>
+                            <span class="skill-tag">信息化项目全流程管理</span>
+                            <span class="skill-tag">客户关系与商务管理</span>
+                            <span class="skill-tag">采购与供应链协调</span>
+                            <span class="skill-tag">团队管理与培训</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 核心成果数据总览 -->
+        <section id="achievements" class="section">
+            <h2><i class="fas fa-chart-bar"></i> 核心成果数据总览</h2>
+            <div class="achievement-cards">
+                <div class="card"><span class="number">15+</span><span class="desc">大型复杂项目全流程管理经验</span></div>
+                <div class="card"><span class="number">5大</span><span class="desc">行业领域项目管理实践（金融、制造、IT等）</span></div>
+                <div class="card"><span class="number">200+</span><span class="desc">家供应商/合作伙伴协调管理</span></div>
+                <div class="card"><span class="number">95%+</span><span class="desc">项目目标达成与客户满意度</span></div>
+            </div>
+        </section>
+
+        <!-- 工作经历 -->
+        <section id="experience" class="section">
+            <h2><i class="fas fa-building"></i> 工作经历</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="job-title">项目管理专家/资深经理</div>
+                    <div class="company">华海智工技术有限公司</div>
+                    <div class="period">2018.12 - 至今</div>
+                    <ul class="responsibilities">
+                        <li><strong>客户与项目综合管理</strong>：统筹公司重点项目，负责立项、开发、验收、回款全周期，实现项目成本控制，协助项目部达成利润率提升10%-15%的目标。</li>
+                        <li><strong>大型自动化工程管理</strong>：负责“X3智能自动化建设工程”等重大项目，下辖多项目部门，主导进度、质量、成本与风险控制。</li>
+                        <li><strong>客户关系与商务管理</strong>：深度参与客户沟通、合同谈判与关系维护，保障项目顺利推进与回款。</li>
+                        <li><strong>内部运营与流程优化</strong>：主导公司级项目管理流程优化，提升跨部门协作效率。</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="job-title">项目经理 (PMO)</div>
+                    <div class="company">（上家公司，简历中未具名）</div>
+                    <div class="period">2016.07 - 2018.11</div>
+                    <ul class="responsibilities">
+                        <li><strong>多项目集管理</strong>：负责管理超过50个自动化项目，协调供应商及合作伙伴超200家。</li>
+                        <li><strong>采购与供应链协调</strong>：组织管理20+家核心供应商，整合资源，优化采购流程与合同管理。</li>
+                        <li><strong>跨部门项目协调</strong>：协调10+个平行项目部，解决资源冲突与信息壁垒，确保项目目标一致。</li>
+                        <li><strong>价值交付</strong>：从项目管理角度带队实施项目，主导项目系统上线，用户理解与应用率达95%以上。</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="job-title">项目经理 / 用户培训负责人</div>
+                    <div class="company">（早期职业经历，简历中未具名）</div>
+                    <div class="period">2014.08 - 2016.06</div>
+                    <ul class="responsibilities">
+                        <li><strong>信息化项目管理</strong>：负责公司信息化项目（如ERP、OA）的规划、实施与交付。</li>
+                        <li><strong>系统培训与知识转移</strong>：负责为期10年以上的系统培训规划，开发并搭建20+门培训课程体系，有效提升用户能力与系统使用率。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心能力亮点 -->
+        <section id="about" class="section">
+            <h2><i class="fas fa-star"></i> 核心能力与自我评价</h2>
+            <table class="info-table">
+                <tr>
+                    <td>核心能力亮点</td>
+                    <td>
+                        <ul style="padding-left: 1.2rem;">
+                            <li><strong>复合型经验</strong>：拥有金融、智能制造、IT信息化等多行业项目管理实战经验，能快速理解不同行业业务逻辑。</li>
+                            <li><strong>全流程掌控力</strong>：擅长从0到1主导大型复杂项目，精通立项、执行、验收、回款全生命周期管理。</li>
+                            <li><strong>卓越的协调与沟通能力</strong>：善于与客户、供应商及内部多部门高效协同，解决复杂冲突，保障项目目标。</li>
+                            <li><strong>数据与结果导向</strong>：注重成本控制与效益提升，以量化数据驱动项目管理决策。</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>自我评价</td>
+                    <td style="font-style: italic; color: #555;">
+                        一位严谨务实、结果驱动的项目管理专家。坚信优秀的项目管理是科学、艺术与领导力的结合。持续学习，致力于通过专业的项目管理能力，为每一份托付创造超越期望的价值。
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2023 王楠 - 本履历在线网站。</p >
+        <p>最后更新于：2023年10月 | 通过 GitHub Pages 托管</p >
+    </footer>
+</body>
+</html>
